@@ -176,6 +176,7 @@ Expression Parser::parse_prefix() {
         break;
     default:
         unreachable;
+        return Expression();
     }
     next_token();
     Expression right = parse_expression(Precedence::Prefix);
@@ -213,6 +214,7 @@ Expression Parser::parse_infix(Expression& left) {
         break;
     default:
         unreachable;
+        return Expression();
     }
 
     Precedence precedence = cur_precedence();
