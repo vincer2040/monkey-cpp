@@ -149,6 +149,7 @@ const char* Token::token_type_string() {
         return "False";
     }
     unreachable;
+    return "";
 }
 
 const char* token_type_to_string(Token::Type type) {
@@ -209,4 +210,5 @@ const char* token_type_to_string(Token::Type type) {
         return "False";
     }
     unreachable;
+    return "";
 }
