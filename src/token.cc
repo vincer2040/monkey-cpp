@@ -89,6 +89,7 @@ const char* Token::get_literal() {
     }
 
     unreachable;
+    return "";
 }
 
 const char* Token::token_type_string() {
