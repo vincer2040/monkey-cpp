@@ -76,6 +76,7 @@ const char* Statement::token_literal() {
         break;
     }
     unreachable;
+    return "";
 }
 
 const char* LetStatement::token_literal() { return tok.get_literal(); }
@@ -103,6 +104,7 @@ const char* Expression::token_literal() {
     default:
         return "";
     }
+    return "";
 }
 
 const char* ExpressionStatement::token_literal() { return tok.get_literal(); }
@@ -145,6 +147,7 @@ std::string Statement::string() {
         break;
     }
     unreachable;
+    return "";
 }
 
 std::string LetStatement::string() {
@@ -287,6 +290,7 @@ const char* prefix_oper_to_string(PrefixExpression::Operator oper) {
         return "-";
     }
     unreachable;
+    return "";
 }
 
 const char* infix_oper_to_string(InfixExpression::Operator oper) {
@@ -310,4 +314,5 @@ const char* infix_oper_to_string(InfixExpression::Operator oper) {
     }
 
     unreachable;
+    return "";
 }
