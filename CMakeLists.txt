@@ -29,6 +29,16 @@ add_library(
     src/lexer.cc
 )
 
+add_library(
+    ast
+    src/ast.cc
+)
+
+add_library(
+    parser
+    src/parser.cc
+)
+
 add_executable(
     monkey
     src/monkey.cc
@@ -38,5 +48,11 @@ target_link_libraries(
     lexer
     util
     token
+)
+
+target_link_libraries(
+    parser
+    lexer
+    ast
 )
 

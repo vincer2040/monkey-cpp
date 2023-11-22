@@ -36,6 +36,8 @@ struct Token {
     } type;
     std::variant<std::monostate, std::shared_ptr<std::string>> literal;
     const char* get_literal();
+    const char* token_type_string();
 };
 
 Token::Type lookup_ident(const std::string& ident);
+const char* token_type_to_string(Token::Type type);
