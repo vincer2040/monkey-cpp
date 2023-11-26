@@ -18,6 +18,11 @@ add_executable(
    parser_test.cc
 )
 
+add_executable(
+    eval_test
+    eval_test.cc
+)
+
 target_link_libraries(
     lexer_test
     GTest::gtest_main
@@ -30,6 +35,14 @@ target_link_libraries(
     parser
 )
 
+target_link_libraries(
+    eval_test
+    GTest::gtest_main
+    parser
+    eval
+)
+
 include(GoogleTest)
 gtest_discover_tests(lexer_test)
 gtest_discover_tests(parser_test)
+gtest_discover_tests(eval_test)

@@ -39,6 +39,16 @@ add_library(
     src/parser.cc
 )
 
+add_library(
+    object
+    src/object.cc
+)
+
+add_library(
+    eval
+    src/eval.cc
+)
+
 add_executable(
     monkey
     src/monkey.cc
@@ -53,6 +63,12 @@ target_link_libraries(
 target_link_libraries(
     parser
     lexer
+    ast
+)
+
+target_link_libraries(
+    eval
+    object
     ast
 )
 
